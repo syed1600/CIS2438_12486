@@ -123,7 +123,7 @@ for item_type in item_type_list:
     # Sort by ID
     items_in_type.sort(key=sort_by_id)
 
-    # The file name
+    # creating the file name
     type_file = item_type.replace(" ", "") + "Inventory.csv"
     with open(type_file, mode='w', newline='') as file:
         writer = csv.writer(file, delimiter=',')
@@ -162,3 +162,4 @@ with open('DamagedInventory.csv', mode='w', newline='') as file:
 
     for item in damaged_items:
         writer.writerow([item.ID, item.man_name, item.item_type, item.item_price, item.service_date])
+
